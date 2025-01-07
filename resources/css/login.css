@@ -1,0 +1,77 @@
+body{
+    background-color: #effdf5;
+    font-family: "Cairo", sans-serif;
+}
+
+.auth-section .container.body {
+    background-color: #effdf5;
+    padding: 64px 32px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.auth-section .card.message {
+    background: #effdf5;
+    padding: 32px 16px;
+    border-radius: 8px;
+    border-color: #00b98e;
+    border-width: 5px;
+    margin-bottom: 32px;
+    font-size: 18px;
+    box-shadow: 3px 3px 10px 10px #5d766947;
+}
+
+.auth-section .card-header h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.auth-section .btn-primary {
+    background-color: #00b98e;
+    border-color: #00b98e;
+    width: 100%;
+}
+.btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: #03d7a0 !important;
+    border-color: #03d7a0 !important;
+}
+.offset-md-4 {
+    margin-left: 0;
+}
+
+.auth-section .btn-link {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+    .auth-section .container.body {
+        padding: 32px 16px;
+    }
+}
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: rgb(103 255 169);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(207 255 228);
+}
+.card-header
+{
+    background-color: rgb(239 253 245);
+}

@@ -34,7 +34,7 @@ class StroreTransactionRequest extends FormRequest
             'property_rooms' => 'sometimes|nullable|numeric',
             'property_status' => 'required',
             'property_address' => 'required|string|max:225',
-            'transaction_status' => 'required|in:معلقة,قيد الانجاز,منجزة,مرفوضة',
+            'transaction_status' => 'in:معلقة,قيد الانجاز,منجزة,مرفوضة',
             'required_documents.*' => 'sometimes|nullable|file|mimes:jpg,jpeg,png,gif,webp,pdf,doc,docx|max:5120',
             'property_images.*' => 'sometimes|nullable|file|mimes:jpg,jpeg,png,gif,webp|max:5120',
 

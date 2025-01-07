@@ -89,11 +89,10 @@ class TransactionController extends Controller
 
         try {
             DB::beginTransaction();
-            log::info('start transaction');
-            $this->paymentService->processPayment($request->amount, 'usd', $request->stripeToken, 'Transaction fee');
             $transaction = $this->transactionService->createTransaction($trasaction_data);
             $this->transactionService->handleAttachments($request->file('required_documents'), $transaction->id);
             $this->transactionService->handleAttachments($request->file('property_images'), $transaction->id);
+            $this->paymentService->processPayment($request->amount, 'usd', $request->stripeToken, 'Transaction fee');
             DB::commit();
             return response()->json(['success' => true , 'transaction' => $transaction])->header('Content-Type', 'application/json');
         } catch (\Stripe\Exception\CardException $e) {

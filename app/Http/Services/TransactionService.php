@@ -42,19 +42,15 @@ class TransactionService{
 
     public function handleAttachments($files, $transactionId)
     {
-        $attachments = [];
-
         if ($files) {
             foreach ($files as $file) {
                 try {
                     $attachment = $this->assetsService->storeAttachment($file, $transactionId);
-                    $attachments[] = $attachment['attachment'];
                 } catch (Exception $e) {
                     Log::error("خطأ في رفع الملف: {$e->getMessage()}");
                     throw new Exception("خطأ في رفع الملف");
                 }
             }
         }
-        return $attachments;
     }
 }

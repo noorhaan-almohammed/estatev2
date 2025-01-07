@@ -23,7 +23,7 @@ Route::get('/', function () { return view('welcome');});
 
 Auth::routes();
 
-Route::post('/storeTransaction',[TransactionController::class,'store']);
+Route::post('/storeTransaction',[TransactionController::class,'store'])->name('storeTransaction');
 
 Route::get('/transaction',[TransactionController::class , 'createTransaction'])->name('createTransaction');
 
